@@ -2,7 +2,7 @@
 @import './components';
 @import './mixins';
 
-// użyto grafiki od Asad Photo Maldives
+// użyto grafiki od Asad Photo Maldives, Vincent Gerbouin
 // www.pexels.com
 
 // font-family: "Open Sans", sans-serif;
@@ -76,6 +76,65 @@ body {
 			transition-delay: 0.1s;
 		}
 	}
+}
+
+.nav {
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+	background-image: $blue-gradient-solid;
+	transform: translateX(100%);
+	transition: 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+	z-index: 100;
+
+	&--active {
+		transform: translateX(0);
+	}
+
+	&__item {
+		position: relative;
+		display: block;
+		margin: 0.5em 0;
+		padding: 0.5em 2em;
+		font-size: 2rem;
+		text-align: center;
+		color: $pure-white;
+		text-decoration: none;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 3px;
+			height: 100%;
+			transform: scaleY(0);
+			transition: transform 0.3s;
+			background-color: $pure-white;
+		}
+
+		&:hover::before {
+			transform: scaleY(1);
+		}
+	}
+}
+
+@keyframes navItemsAnimation {
+	from {
+		transform: translateX(200%);
+	}
+
+	to {
+		transform: translateX(0);
+	}
+}
+
+.nav-items-animation {
+	animation: navItemsAnimation 1s both;
 }
 
 // header
