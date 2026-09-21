@@ -160,8 +160,7 @@ body {
   display: block;
   margin: 0.5em 0;
   padding: 0.5em 2em;
-  font-size: 2rem;
-  text-align: center;
+  font-size: 2.8rem;
   color: #fff;
   text-decoration: none;
 }
@@ -361,7 +360,7 @@ body {
   background-color: #00ffaa;
   cursor: pointer;
 }
-.islands__card-info-btn:hover {
+.islands__card-info-btn:before {
   background-color: #0fe29c;
 }
 
@@ -476,14 +475,14 @@ body {
 }
 .contact__form-input {
   margin-bottom: 2em;
-  padding: 0.6em -1.2em;
+  padding: 0.6em 1.2em;
   border: none;
   border-radius: 8px;
   font-size: 1.6rem;
 }
 .contact__form-textarea {
   margin-bottom: 2em;
-  padding: 0.6em -1.2em;
+  padding: 0.6em 1.2em;
   border: none;
   border-radius: 8px;
   font-size: 1.6rem;
