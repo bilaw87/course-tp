@@ -26,6 +26,7 @@ body {
 	font-size: 1.6rem;
 }
 
+
 //  nav
 .burger-btn {
 	position: fixed;
@@ -137,6 +138,11 @@ body {
 	animation: navItemsAnimation 1s both;
 }
 
+.black-bars-color,
+.black-bars-color::after,
+.black-bars-color::before {
+	background-color: $dark;
+}
 // header
 .header {
 	position: relative;
@@ -198,7 +204,7 @@ body {
 	}
 
 	&__text {
-		font-size: 1.4em;
+		font-size: 1.4rem;
 	}
 }
 
@@ -503,6 +509,8 @@ body {
 .footer {
 	color: $pure-white;
 	background-color: $dark;
+	cursor: default;
+	user-select: none;
 
 	.wrapper {
 		padding: 6em 2em 2em;
